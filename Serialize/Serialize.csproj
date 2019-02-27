@@ -10,6 +10,10 @@
     <Product>Stoic Dreams Serialize</Product>
     <Description>Simple abstract methods to convert between JSON and classes.</Description>
     <Copyright>Stoic Dreams</Copyright>
+    <PackageProjectUrl>https://github.com/StoicDreams/Serialize</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StoicDreams/Serialize</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseUrl>https://github.com/StoicDreams/Serialize/blob/master/docs/LICENSE.md</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
