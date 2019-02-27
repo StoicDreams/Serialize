@@ -16,7 +16,7 @@ We are not currently accepting contributions to this project. But if you'd like 
 
 ## License
 
-This project is [public domain](license.md)
+This project is [public domain](LICENSE.md)
 
 ## Acknowledgments
 
