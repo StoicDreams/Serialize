@@ -18,6 +18,6 @@ We are not currently accepting contributions to this project. But if you'd like 
 
 This project is [public domain](unlicense.md)
 
-## Acknowledgements
+## Acknowledgments
 
-* [Newtonsoft](https://www.newtonsoft.com/json) - Thank.
+* [Newtonsoft](https://www.newtonsoft.com/json) - Great, and robust library for JSON serialization and deserialization.
