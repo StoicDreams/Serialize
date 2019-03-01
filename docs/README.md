@@ -1,5 +1,9 @@
 # Serialize - by Stoic Dreams
 
+```
+Pre-release - Expect possible breaking changes throughout development until 1.0 release.
+```
+
 Simple abstract methods to convert between C# classes and JSON text.
 
 ## Getting Started
