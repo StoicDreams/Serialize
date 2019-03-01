@@ -9,21 +9,23 @@ namespace UnitTests
 		[TestMethod]
 		public void TestSerialize()
 		{
+			JSON serializer = new JSON();
 			string jsonA = "{\"One\":\"1\",\"Two\":\"2\"}";
 			TestA testA = new TestA() { One = "1", Two = "2" };
-			Assert.AreEqual(jsonA, JSON.Serialize(testA));
+			Assert.AreEqual(jsonA, serializer.Serialize(testA));
 			string jsonB = "{\"One\":1,\"Two\":2.0}";
 			TestB testB = new TestB() { One = 1, Two = 2m };
-			Assert.AreEqual(jsonB, JSON.Serialize(testB));
+			Assert.AreEqual(jsonB, serializer.Serialize(testB));
 		}
 		[TestMethod]
 		public void TestDeSerialize()
 		{
+			JSON serializer = new JSON();
 			string json = "{\"One\":1,\"Two\":2}";
-			TestA testA = JSON.Deserialize<TestA>(json);
+			TestA testA = serializer.Deserialize<TestA>(json);
 			Assert.AreEqual("1", testA.One);
 			Assert.AreEqual("2", testA.Two);
-			TestB testB = JSON.Deserialize<TestB>(json);
+			TestB testB = serializer.Deserialize<TestB>(json);
 			Assert.AreEqual(1, testB.One);
 			Assert.AreEqual(2.0m, testB.Two);
 		}
