@@ -1,7 +1,9 @@
 trigger:
 --master
+
 jobs:
-- job: Windows
+
+  - job: Windows
   pool:
     vmImage: 'vs2017-win2016'
   # The Windows build involves running a powershell script
