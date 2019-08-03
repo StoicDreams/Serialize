@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>0.0.5</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.6</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>StoicDreamsSerialize</PackageId>
     <Authors>Erik Gassler</Authors>
@@ -16,11 +16,13 @@
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageTags>JSON Serialize Serializer Deserializer</PackageTags>
     <PackageIconUrl>https://www.myfi.ws/img/sd/logoT600.png</PackageIconUrl>
-    <AssemblyVersion>0.0.5.0</AssemblyVersion>
-    <FileVersion>0.0.5.0</FileVersion>
-    <LangVersion>7.1</LangVersion>
+    <AssemblyVersion>0.0.6.0</AssemblyVersion>
+    <FileVersion>0.0.6.0</FileVersion>
+    <LangVersion>8.0</LangVersion>
     <PackageReleaseNotes />
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <AssemblyName>StoicDreams.Serialize</AssemblyName>
+    <RootNamespace>StoicDreams.Serialize</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

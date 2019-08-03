@@ -1,39 +1,41 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Xunit;
 using StoicDreams.Serialize;
 
-namespace UnitTests
+namespace XUnitTests
 {
-	[TestClass]
-	public class UnitTest_JSON
+	public class Unit_JSON
 	{
-		[TestMethod]
+		[Fact]
 		public void TestSerialize()
 		{
 			JSON serializer = new JSON();
 			string jsonA = "{\"One\":\"1\",\"Two\":\"2\"}";
 			TestA testA = new TestA() { One = "1", Two = "2" };
-			Assert.AreEqual(jsonA, serializer.Serialize(testA));
+			Assert.Equal(jsonA, serializer.Serialize(testA));
 			string jsonB = "{\"One\":1,\"Two\":2.0}";
 			TestB testB = new TestB() { One = 1, Two = 2m };
-			Assert.AreEqual(jsonB, serializer.Serialize(testB));
+			Assert.Equal(jsonB, serializer.Serialize(testB));
 		}
-		[TestMethod]
+
+		[Fact]
 		public void TestDeSerialize()
 		{
 			JSON serializer = new JSON();
 			string json = "{\"One\":1,\"Two\":2}";
 			TestA testA = serializer.Deserialize<TestA>(json);
-			Assert.AreEqual("1", testA.One);
-			Assert.AreEqual("2", testA.Two);
+			Assert.Equal("1", testA.One);
+			Assert.Equal("2", testA.Two);
 			TestB testB = serializer.Deserialize<TestB>(json);
-			Assert.AreEqual(1, testB.One);
-			Assert.AreEqual(2.0m, testB.Two);
+			Assert.Equal(1, testB.One);
+			Assert.Equal(2.0m, testB.Two);
 		}
+
 		private class TestA
 		{
 			public string One { get; set; }
 			public string Two { get; set; }
 		}
+
 		private struct TestB
 		{
 			public int One { get; set; }
