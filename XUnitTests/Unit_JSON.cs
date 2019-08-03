@@ -6,6 +6,14 @@ namespace XUnitTests
 	public class Unit_JSON
 	{
 		[Fact]
+		public void Verify_SerializeDeserialize()
+		{
+			string jsonA = "{\"One\":\"1\",\"Two\":\"2\"}";
+			TestA dataA = JSON.Serializer.DeserializeAsync<TestA>(jsonA).GetAwaiter().GetResult();
+			string serialA = JSON.Serializer.SerializeAsync(dataA).GetAwaiter().GetResult();
+			Assert.Equal(jsonA, serialA);
+		}
+		[Fact]
 		public void TestSerialize()
 		{
 			JSON serializer = new JSON();

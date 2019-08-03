@@ -9,25 +9,22 @@ namespace StoicDreams.Serialize
 		{
 			FloatParseHandling = FloatParseHandling.Decimal
 		};
+		public static JSON Serializer { get; } = new JSON();
 		public async Task<T> DeserializeAsync<T>(string json)
 		{
-			return await Task.Run(() => JsonConvert.DeserializeObject<T>(json, DefaultSerializerSettings));
+			return await Task.Run(() => Deserialize<T>(json));
 		}
 		public async Task<string> SerializeAsync<T>(T input)
 		{
-			return await Task.Run(() => JsonConvert.SerializeObject(input, DefaultSerializerSettings));
+			return await Task.Run(() => Serialize(input));
 		}
 		public T Deserialize<T>(string json)
 		{
-			var task = Task.Run(() => DeserializeAsync<T>(json));
-			task.Wait();
-			return task.Result;
+			return JsonConvert.DeserializeObject<T>(json, DefaultSerializerSettings);
 		}
 		public string Serialize<T>(T input)
 		{
-			var task = Task.Run(() => SerializeAsync(input));
-			task.Wait();
-			return task.Result;
+			return JsonConvert.SerializeObject(input, DefaultSerializerSettings);
 		}
 	}
 }
